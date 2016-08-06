@@ -1,15 +1,32 @@
 [Load Balancer]
+
 [HTTP API & Routing]
+
 [Transport]
+
 [
+
 	[Service] -> [Database]
+
 	[Service] -> [Database]
+
 ]
 
-- Static message
-1. Random from list
-..1. Develope build workflow (app server, db server)
-....1. Build app
-....2. Boot storage server
-....3. Build and Boot app server
-2. Generated
+
+- [x] Static message
+- [x] Random from list
+- [ ] Generate list from data
+
+## Workflow
+
+`mkdir $GOPATH/build && cd $GOPATH/build`
+
+`touch Dockerfile docker-compose.yaml`
+
+Setup your Dockerfile for the application and docker-compse.yaml
+
+Build application using `go build -i -o $GOPATH/build/bin`
+
+Build image using `docker-compose build`
+
+Run with `docker-compose up -d`
