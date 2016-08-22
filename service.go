@@ -22,7 +22,7 @@ func (svc *prophetService) Consult() (string, error) {
 }
 
 func (svc *prophetService) Prepare() {
-//	svc.rclient.SAdd("consult", "Never doubt a prophet.")
+	svc.rclient.SAdd("consult", "Never doubt a prophet.")
 	svc.rclient.SAdd("consult", "Is that so.")
 	svc.rclient.SAdd("consult", "A prophet is never late.")
 }
